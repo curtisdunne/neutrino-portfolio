@@ -16,4 +16,9 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    NeutrinoSoftwareCompanyViewTool::Renderer.copyright "Neutrino Software Company", "All rights reserved"
+  end
+
+
 end
