@@ -68,3 +68,8 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'html5sortable', '~> 0.1.0'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.4'
