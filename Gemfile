@@ -58,7 +58,8 @@ gem 'friendly_id', '~> 5.2.5'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+# gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '>= 4.3.1'
 # gem 'neutrino_software_company_view_tool', git: 'https://github.com/curtisdunne/neutrino_software_company_view_tool'
 gem 'neutrino_software_company_view_tool', '~> 0.1.0'
 
