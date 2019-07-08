@@ -28,7 +28,7 @@ ready = ->
       data: order: updated_order
       beforeSend: (xhr) ->
         xhr.setRequestHeader 'X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')
-        return 
+        return
     return
   return
 
