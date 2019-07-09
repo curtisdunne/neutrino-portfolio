@@ -28,7 +28,7 @@ class PortfoliosController < ApplicationController
       if @portfolio_item.save
         format.html {redirect_to portfolios_path, notice: 'Portfolio was successfully added'}
       else
-        format.html { render new }
+        format.html { render :new }
       end
     end
   end
