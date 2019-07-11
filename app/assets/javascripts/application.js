@@ -16,6 +16,7 @@
 //= require jquery-ui
 //= require cocoon
 //= require gritter
+//= require cable
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
