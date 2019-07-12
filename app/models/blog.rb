@@ -12,4 +12,17 @@ class Blog < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   belongs_to :topic, optional: true
+
+  def self.special_blogs
+    all
+  end
+
+  def self.featured_blogs
+    limit(2)
+  end
+
+  def self.recent
+    order("created_at DESC")
+  end
+
 end
