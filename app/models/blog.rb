@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   has_many :comments, dependent: :destroy
 
