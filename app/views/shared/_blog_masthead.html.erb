@@ -3,10 +3,10 @@
     <h1 class="blog-title">Neutrino Software Blog</h1>
     <p class="lead blog-description">Random thoughts that make me happy or might just make my head hurt</p>
     <span>
-      <%= link_to 'Write a New Blog', new_blog_path, class:"btn btn-primary" if logged_in?(:site_admin) %>
+      <%= link_to 'Write a New Blog', new_blog_path, class:"btn btn-primary blog-header-new-button" if logged_in?(:site_admin) %>
     </span>
 
-    <span class="blog-header-topic-button">
+    <span>
       <%= link_to 'Topics', topics_path, class: 'btn btn-primary' %>
     </span>
 
