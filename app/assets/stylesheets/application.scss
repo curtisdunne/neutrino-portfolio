@@ -222,3 +222,25 @@ body {
 .tech-news > .card {
   padding: 30px;
 }
+
+.app-card-container {
+  color: #435369;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.app-card-container a {
+  color: blue;
+}
+
+.profile-image {
+  border: 1px solid grey;
+  border-radius: 25px;
+}
+
+.about-heading {
+  color: black;
+}
