@@ -28,6 +28,8 @@ a:hover {
  */
 
 html, body {
+  font-family: 'Raleway', sans-serif; // for text
+
   height: 100%;
   // background-color: #333;
 }
@@ -36,6 +38,15 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Righteous', cursive; // for headings
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -221,4 +232,39 @@ body {
 
 .tech-news > .card {
   padding: 30px;
+}
+
+.app-card-container {
+  color: #435369;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.app-card-container a {
+  color: blue;
+}
+
+.profile-image {
+  border: 1px solid grey;
+  border-radius: 25px;
+}
+
+.about-heading {
+  color: black;
+}
+
+.about-history-card {
+  padding: 24px;
+}
+
+.skills {
+  text-align: left;
+}
+
+.skill {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
