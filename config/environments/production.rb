@@ -92,4 +92,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_cable.allowed_request_origins = ['https://neutrino-portfolio.herokuapp.com',
+                                                 'http://neutrino-portfolio.herokuapp.com',
+                                                 'https://curtisdunne.com',
+                                                 'http://curtisdunne.com']
+
+  config.action_cable.url = "wss://neutrino-portfolio.herokuapp.com/cable"
+
 end
