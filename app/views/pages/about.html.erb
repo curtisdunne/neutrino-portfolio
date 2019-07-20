@@ -9,11 +9,11 @@
         <%= image_tag "CurtisDunnePic.jpg", width: 250, alt: "Neutrino Logo", class: 'profile-image' %>
 
         <div class="skills">
-          <h3 class="skills-head">How I Spend my Day</h3>
+          <h4 class="skills-head">How I Spend my Day</h4>
           <hr>
           <% @skills.each do |skill| %>
             <div class="skill">
-              <h5><%= skill.title %></h5>
+              <h6><%= skill.title %></h6>
               <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-warning"
                   role="progressbar"
