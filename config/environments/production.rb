@@ -56,14 +56,31 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
-  # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
-
-  # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "NeutrinoPortfolio_#{Rails.env}"
-
   config.action_mailer.perform_caching = false
+
+  # doesn't have to be Heroku, but you get the idea.
+  config.action_mailer.default_url_options = { :host => 'neutrino-portfolio.herokuapp.com' }
+  Rails.application.routes.default_url_options[:host] = 'neutrino-portfolio.herokuapp.com'
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.performs_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password:ENV["GMAIL_PASSWORD"]
+  }
+
+
+
+
+
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
