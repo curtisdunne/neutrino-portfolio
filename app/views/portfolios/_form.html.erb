@@ -17,6 +17,14 @@
         <%= form.text_field :subtitle, class: 'form-control' %>
       </div>
 
+      <div class="form-group radio-margin">
+        <%= form.radio_button :nda_status, 'nda_covered' %>
+        <%= form.label :nda_status, 'Covered by NDA', class: 'radio-margin' %>
+
+        <%= form.radio_button :nda_status, 'nda_not_covered' %>
+        <%= form.label :nda_status, 'Not covered by NDA', class: 'radio-margin' %>
+      </div>
+
       <div class="form-group">
         <label class='btn btn-primary'>
           Upload a main image file <%= form.file_field :main_image, style: 'display:none;' %>

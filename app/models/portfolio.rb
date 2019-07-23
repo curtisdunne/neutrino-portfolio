@@ -1,4 +1,9 @@
 class Portfolio < ApplicationRecord
+  enum nda_status: {
+    nda_not_covered: 0,
+    nda_covered: 1
+  }
+
   has_many :technologies
   accepts_nested_attributes_for :technologies,
                                 allow_destroy: true,

@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy, :toggle_nda_status]
   layout 'portfolio'
 
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
@@ -57,6 +57,16 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def toggle_nda_status
+    if @portfolio_item.nda_covered?
+      @portfolio_item.nda_not_covered!
+    elsif @portfolio_item.nda_not_covered?
+      @portfolio_item.nda_covered!
+    end
+
+    redirect_to portfolios_url, notice: 'NDA Status has been updated.'
+  end
+
   private
 
   def portfolio_params
@@ -65,6 +75,7 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :main_image,
                                       :thumb_image,
+                                      :nda_status,
                                       technologies_attributes: [:id, :name, :_destroy]
                                      )
   end

@@ -3,7 +3,14 @@
     <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: 'img-thumbnail', width: '100%' %>
 
     <p class="card-text">
-      <span><p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p></span> <%= portfolio_item.subtitle %>
+      <span><p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p></span>
+      <p><%= portfolio_item.subtitle %></p>
+
+      <% if logged_in?(:site_admin) %>
+        <%= link_to portfolio_item.nda_status, toggle_nda_status_portfolio_path(portfolio_item) %>
+      <% else %>
+        <%= portfolio_item.nda_status %>
+      <% end %>
     </p>
   </div>
 </div>
