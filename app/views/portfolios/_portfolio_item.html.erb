@@ -1,16 +1,22 @@
 <div class="col-md-4">
   <div class="card" data-id="<%= portfolio_item.id %>">
+    <div class="portfolio-status">
+      <% if logged_in?(:site_admin) %>
+        <%= link_to fa_icon("certificate"), toggle_nda_status_portfolio_path(portfolio_item), style: portfolio_status_color(portfolio_item) %>
+      <% else %>
+        <%= fa_icon("certificate", style: portfolio_status_color(portfolio_item)) %>
+      <% end %>
+    </div>
+
     <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: 'img-thumbnail', width: '100%' %>
 
     <p class="card-text">
-      <span><p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p></span>
+      <span>
+        <p>
+          <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %>
+        </p>
+      </span>
       <p><%= portfolio_item.subtitle %></p>
-
-      <% if logged_in?(:site_admin) %>
-        <%= link_to portfolio_item.nda_status, toggle_nda_status_portfolio_path(portfolio_item) %>
-      <% else %>
-        <%= portfolio_item.nda_status %>
-      <% end %>
     </p>
   </div>
 </div>

@@ -10,7 +10,7 @@
 
       <em><%= @portfolio_item.subtitle %></em>
       <p><%= @portfolio_item.body %></p>
-      <p><%= @portfolio_item.nda_status %></p>
+      <%= fa_icon("certificate", style: portfolio_status_color(@portfolio_item), class: 'portfolio-status') %>
 
       <hr>
 

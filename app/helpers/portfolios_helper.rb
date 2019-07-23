@@ -12,4 +12,13 @@ module PortfoliosHelper
       image_generator(height: '600', width: '400')
     end
   end
+
+  def portfolio_status_color(portfolio)
+    if portfolio.nda_covered?
+      'color: red;'
+    elsif portfolio.nda_not_covered?
+      'color: green;'
+    end
+  end
+
 end

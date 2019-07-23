@@ -2,9 +2,21 @@
   <div class="container">
     <h1 class="jumbotron-heading">My Portfolio</h1>
     <p class="lead text-muted">This is a small, random representation of some of the work we have done over the past few years.</p>
+
+    <p>
+      <h6>
+        <%= fa_icon("certificate", class: 'portfolio-status-green') %> Indicates app <em>is not protected</em> by an NDA
+      </h6>
+
+      <h6>
+        <%= fa_icon("certificate", class: 'portfolio-status-red') %> Indicates app <em>is</em> protected by an NDA
+      </h6>
+    </p>
+
     <p>
       <%= link_to 'More about Curtis Dunne & Neutrino Software Company', about_path, class: 'btn btn-primary' %>
       <%= link_to 'My Blog', blogs_path, class: 'btn btn-secondary' %>
     </p>
+
   </div>
 </section>
