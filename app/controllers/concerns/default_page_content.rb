@@ -7,6 +7,6 @@ module DefaultPageContent
 
   def set_page_defaults
     @page_title = "Neutrino Software Company | Portfolio"
-    @seo_keywords = "Curtis Dunne portfolio"
+    @seo_keywords = "Curtis Dunne portfolio Neutrino Software"
   end
 end
